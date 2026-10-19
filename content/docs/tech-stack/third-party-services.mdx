@@ -1,0 +1,14 @@
+---
+title: "Third-party services"
+description: "Payments, email, notifications and crash reporting."
+---
+
+| What                   | We use                       | Notes |
+| ---------------------- | ---------------------------- | ----- |
+| Payments               | [Stripe](https://stripe.com) and [Square](https://squareup.com) | Stripe by default. Square when a client already uses it, including in-app payments in Flutter. |
+| DNS, CDN and security  | [Cloudflare](https://www.cloudflare.com) | |
+| Google APIs            | [Google Cloud Console](https://console.cloud.google.com) | OAuth credentials for Sign in with Google, and API keys for Google Maps Platform. |
+| Transactional email    | [Resend](https://resend.com) | Our recommendation, and what we use in testing. Some clients prefer their own SMTP. |
+| Push notifications     | Firebase Cloud Messaging     | |
+| Mobile crash reporting | Firebase Crashlytics         | |
+

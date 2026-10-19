@@ -1,0 +1,40 @@
+---
+title: "Other tech we support"
+description: "Technology we maintain and support."
+---
+
+Some of the projects we look after weren't built using our preferred tech stack. We have experience with the technology below and support it.
+
+| Technology | Where we see it | For new projects use |
+| ---------- | --------------- | -------------------- |
+| .NET / C# (ASP.NET Core, Entity Framework) | APIs, often with PostgreSQL or SQL Server | [Laravel](/docs/tech-stack/web) |
+| React Native | Mobile apps | [Flutter](/docs/tech-stack/mobile) |
+| Swift and Kotlin | Native iOS and Android apps | [Flutter](/docs/tech-stack/mobile), with exceptions ([see below](#native-apps)) |
+| Standalone React (Create React App) | Admin panels and front ends | [Laravel with Inertia](/docs/tech-stack/web) |
+| Next.js and Nuxt | Front ends | [See below](#separate-front-ends) |
+| Strapi | CMS behind mobile apps | A Laravel admin |
+| Older Laravel and plain PHP | Back ends and APIs | Current Laravel |
+
+## Separate front ends
+
+Apps are built with [Laravel and Inertia](/docs/tech-stack/web). A separate front end means extra deployments, auth and API work, so it's only worth it when:
+
+- the site is large, public and content-heavy, and benefits from static generation
+- it sits on an API we don't own, such as a client's platform or a headless CMS
+- the client requires it
+
+When we do, we use Next.js, because it's React like the rest of our work. Nuxt is for existing Vue projects.
+
+## Native apps
+
+When an existing native app needs significant work, we often rebuild it in Flutter so the client has one codebase for iOS and Android instead of two. We keep it native when the app is built around features that need the platform directly. See [AR / VR / XR](/docs/tech-stack/mobile#ar--vr--xr).
+
+## Inherited codebases
+
+When we take on a project, check what it runs on before committing to work on it. Several stacks we support are past end of life, including .NET 6, .NET Core 3.1, PHP 7.4, Laravel 10 and Create React App, which means no more security fixes.
+
+For each one, agree with the client whether to:
+
+- **Maintain** it as it is, for small changes on a stable system.
+- **Upgrade** it in steps, when the codebase is sound but the versions are out of date.
+- **Rebuild** it on our stack, when it's costly to change or too risky to keep running.

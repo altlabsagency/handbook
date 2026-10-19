@@ -1,0 +1,48 @@
+---
+title: "Mobile"
+description: "Flutter apps and the APIs behind them."
+---
+
+New mobile apps are built in [Flutter](https://flutter.dev), so one codebase covers iOS and Android. We also maintain React Native and native Swift and Kotlin apps; see [Other tech we support](/docs/tech-stack/other-tech).
+
+## App
+
+| What                  | We use                                       |
+| --------------------- | -------------------------------------------- |
+| Framework             | Flutter, on the latest stable SDK            |
+| State management      | Provider                                     |
+| Navigation            | go_router                                    |
+| HTTP                  | dio                                          |
+| Secure storage        | flutter_secure_storage                       |
+| Push notifications    | Firebase Cloud Messaging, with flutter_local_notifications |
+| Crash reporting       | Firebase Crashlytics                         |
+| Analytics             | Firebase Analytics                           |
+| Linting               | flutter_lints                                |
+
+## AR / VR / XR
+
+Flutter has no official AR support. Community plugins cover only part of ARKit and ARCore, and they're slow to pick up new platform features. AR work is built natively.
+
+| Platform          | We use                          |
+| ----------------- | ------------------------------- |
+| iOS               | Swift with ARKit and RealityKit |
+| Android           | Kotlin with ARCore              |
+| Apple Vision Pro  | Swift with RealityKit           |
+
+How much of the app goes native depends on how central AR is:
+
+- **Fully native** when AR is the core of the app, or it relies on hardware such as the LiDAR scanner or depth sensors. These need the lowest-level platform APIs, which plugins don't expose.
+- **Flutter with native AR views** when AR is one feature in a larger app. The AR screens are written in Swift or Kotlin and embedded as platform views, and the rest of the app stays in Flutter.
+
+## Back end
+
+The app's API and admin panel are a Laravel app built on our [web stack](/docs/tech-stack/web). New projects don't use a separate CMS for app content; manage it in the Laravel admin.
+
+## Builds and releases
+
+Apps are built and released with [Fastlane](https://fastlane.tools), run from GitHub Actions.
+
+- **Checks:** every pull request runs `dart format`, `flutter analyze` and `flutter test`.
+- **Flavours:** each app has `dev`, `staging` and `prod` flavours. Release secrets for each live in a GitHub Environment.
+- **Test builds:** `dev` and `staging` builds go to testers through Firebase App Distribution.
+- **Production:** Android builds go to the Play Store internal track and are promoted to production with a staged rollout. iOS builds go to TestFlight and are submitted to the App Store with a phased release.

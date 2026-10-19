@@ -1,0 +1,14 @@
+{
+  "title": "Tech Stack",
+  "icon": "Layers",
+  "pages": [
+    "web",
+    "mobile",
+    "ai-llm",
+    "data-storage",
+    "hosting-deployment",
+    "third-party-services",
+    "other-tech",
+    "proposing-a-tool"
+  ]
+}

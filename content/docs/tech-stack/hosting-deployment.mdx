@@ -1,0 +1,14 @@
+---
+title: "Hosting & deployment"
+description: "Where our apps run and how they get there."
+---
+
+Where an app runs usually depends on the client. We work in whichever cloud they use. All code lives on GitHub, and GitHub Actions runs our CI.
+
+## AWS
+
+AWS is our default. We usually deploy to EC2 instances, provisioned and deployed with [Vito Deploy](https://vitodeploy.com). Other AWS deployment tooling is used where a client's setup needs it.
+
+## Azure
+
+When a client is on Azure, we deploy to Azure App Service, using its continuous deployment integration with GitHub Actions.

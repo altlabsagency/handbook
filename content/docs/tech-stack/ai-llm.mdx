@@ -1,0 +1,18 @@
+---
+title: "AI & LLMs"
+description: "How we call models and which providers we use."
+---
+
+## In Laravel
+
+Use the [Laravel AI SDK](https://laravel.com/docs/ai-sdk) (`laravel/ai`) to call models. It gives one API for text generation, agents, tools, structured output and embeddings across providers, so switching provider is a config change rather than a rewrite.
+
+## Choosing a provider
+
+| Provider | When to use it |
+| -------- | -------------- |
+| Amazon Bedrock | The client is on AWS, or needs data to stay in their own cloud account or region. Our usual default. |
+| Azure OpenAI | The client is on Azure, or needs data to stay in their own Azure tenant. |
+| Anthropic (direct) | Bedrock or Azure would be overkill, for example smaller projects and internal tools. |
+
+Agree the provider with the client early. It affects data handling, contracts and cost, not just code. How we design and evaluate AI features is covered in [Building AI features](/docs/ai/building-ai-features).

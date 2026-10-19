@@ -1,0 +1,10 @@
+{
+  "title": "Quality & Testing",
+  "icon": "BadgeCheck",
+  "pages": [
+    "testing-strategy",
+    "qa-process",
+    "performance",
+    "accessibility"
+  ]
+}

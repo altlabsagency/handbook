@@ -1,0 +1,10 @@
+{
+  "title": "Home",
+  "icon": "House",
+  "defaultOpen": true,
+  "pages": [
+    "about",
+    "contributing",
+    "changelog"
+  ]
+}

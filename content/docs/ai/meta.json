@@ -1,0 +1,10 @@
+{
+  "title": "AI",
+  "icon": "Sparkles",
+  "pages": [
+    "approach",
+    "ai-assisted-development",
+    "building-ai-features",
+    "tools-providers"
+  ]
+}

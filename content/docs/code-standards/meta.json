@@ -1,0 +1,12 @@
+{
+  "title": "Code Standards",
+  "icon": "Code",
+  "pages": [
+    "general-principles",
+    "laravel",
+    "react",
+    "mobile",
+    "apis",
+    "linting-formatting"
+  ]
+}

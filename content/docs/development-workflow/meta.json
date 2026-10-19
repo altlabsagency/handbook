@@ -1,0 +1,12 @@
+{
+  "title": "Development Workflow",
+  "icon": "GitBranch",
+  "pages": [
+    "branching-commits",
+    "pull-requests",
+    "code-review",
+    "definition-of-done",
+    "environments",
+    "releases-rollbacks"
+  ]
+}

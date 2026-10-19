@@ -1,0 +1,10 @@
+{
+  "title": "Architecture",
+  "icon": "Network",
+  "pages": [
+    "system-overview",
+    "project-setup",
+    "common-patterns",
+    "decision-records"
+  ]
+}

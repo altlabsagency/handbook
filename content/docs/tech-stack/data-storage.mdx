@@ -1,0 +1,15 @@
+---
+title: "Data & storage"
+description: "Databases, queues and file storage."
+---
+
+| What          | We use                                                        |
+| ------------- | ------------------------------------------------------------- |
+| Database      | MySQL                                                         |
+| Queues        | Laravel's `database` queue driver                             |
+| Cache         | Laravel's `database` cache driver                             |
+| File storage  | Amazon S3 or Azure Blob Storage, depending on the client |
+
+We don't run Redis by default. The database drivers are enough for most of our projects and mean one less service to host. Add Redis when a project's queue or cache load needs it.
+
+Some inherited projects use PostgreSQL or SQL Server; see [Other tech we support](/docs/tech-stack/other-tech).

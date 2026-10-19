@@ -1,0 +1,47 @@
+---
+title: "Web apps"
+description: "Laravel, Inertia and React."
+---
+
+Our web apps are single Laravel applications with a React front end, connected by [Inertia](https://inertiajs.com). Laravel owns routing, authentication, validation, authorisation and background work. React renders the pages. There's no separate API to design, version or secure, and one codebase deploys as one app.
+
+## Starting a project
+
+Start every new web app from the [Laravel React starter kit](https://laravel.com/docs/starter-kits) on the latest stable Laravel. It gives us the defaults below already wired together, so projects look the same from day one.
+
+## Back end
+
+| What                 | We use                                                       |
+| -------------------- | ------------------------------------------------------------ |
+| Framework            | Laravel, on the latest stable release                        |
+| Authentication       | Laravel Fortify (from the starter kit)                       |
+| Roles and permissions | `spatie/laravel-permission`                                 |
+| Routes in TypeScript | Laravel Wayfinder                                            |
+| Testing              | Pest                                                         |
+| Formatting           | Laravel Pint                                                 |
+| Static analysis      | Larastan                                                     |
+| AI-assisted development | Laravel Boost                                             |
+
+## Front end
+
+| What          | We use                                           |
+| ------------- | ------------------------------------------------ |
+| Framework     | React with TypeScript (always TypeScript)        |
+| Build         | Vite                                             |
+| Styling       | Tailwind CSS                                     |
+| Components    | shadcn/ui                                        |
+| Icons         | Lucide                                           |
+| Toasts        | Sonner                                           |
+| Linting       | ESLint and Prettier                              |
+
+## Admin panels and content management
+
+Client admin areas and content management are built in Laravel, in the same app. We don't add a separate CMS for new projects. Some existing projects use Strapi; see [Other tech we support](/docs/tech-stack/other-tech).
+
+## Local development
+
+Use [Laravel Valet](https://laravel.com/docs/valet), or run `composer run dev` from the starter kit. The starter kit includes Sail, but we don't rely on it.
+
+## When not to use this stack
+
+If a project is a public, content-heavy marketing site, or a front end over an API we don't own, a different setup may fit better. See [Other tech we support](/docs/tech-stack/other-tech) for when we'd reach for Next.js.

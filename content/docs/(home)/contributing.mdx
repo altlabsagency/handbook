@@ -1,0 +1,85 @@
+---
+title: How to contribute
+description: How to fix, improve or add to the handbook.
+---
+
+Anyone at AltLabs can propose a change to the handbook. Every change goes through a pull request, so nothing is published without a second pair of eyes.
+
+## Small fixes: edit on GitHub
+
+For typos, broken links or a sentence that needs updating:
+
+1. At the top of the page, choose **Open → Open in GitHub**.
+2. Click the pencil icon and make your change in GitHub's editor.
+3. Choose **Create a new branch and start a pull request**, then describe what you changed and why.
+
+## Bigger changes: work locally
+
+For new pages, restructuring, or anything you want to preview first:
+
+```bash
+git clone https://github.com/altlabsagency/handbook.git
+cd handbook
+npm install
+npm run dev
+```
+
+Then open [http://localhost:3000/docs](http://localhost:3000/docs). Pages reload as you edit.
+
+### Where things live
+
+| What                       | Where                                   |
+| -------------------------- | --------------------------------------- |
+| Pages                      | `content/docs/<section>/<page>.mdx`     |
+| Page order and section names | `meta.json` in each section folder    |
+| Home section (about, this page, changelog) | `content/docs/(home)/`  |
+
+### Adding a page
+
+1. Create an `.mdx` file in the right section folder. The file name becomes the URL, so use lowercase words separated by hyphens.
+2. Add frontmatter with a `title` and a one-sentence `description`:
+
+   ```mdx
+   ---
+   title: Pull requests
+   description: How we open, size and describe pull requests.
+   ---
+   ```
+
+3. Add the file name (without `.mdx`) to the `pages` list in that folder's `meta.json`, where you want it to appear in the sidebar. **Pages not listed in `meta.json` won't show in the sidebar.**
+4. Write the content. Don't repeat the title as a heading; it's rendered from the frontmatter. Start with `##` headings.
+
+### Writing a placeholder page
+
+When you fill in a placeholder, remove the **Placeholder** callout once the page has real content.
+
+### Components you can use
+
+Pages are [MDX](https://mdxjs.com), so as well as Markdown you can use these components:
+
+```mdx
+<Callout type="warn" title="Heads up">Something to be careful of.</Callout>
+
+<Cards>
+  <Card title="Pull requests" href="/docs/development-workflow/pull-requests">
+    How we open and describe pull requests.
+  </Card>
+</Cards>
+```
+
+Callout types are `info`, `warn`, `error`, `success` and `idea`. See the [Fumadocs Markdown guide](https://fumadocs.dev/docs/markdown) for everything else.
+
+## Opening a pull request
+
+1. Before pushing, run `npm run build` to check the site still builds.
+2. Open a pull request against `main`. An automated check builds the site, so broken pages are caught before merge.
+3. Once it's approved and merged, the site redeploys automatically within a few minutes.
+4. For anything beyond a small fix, add a line to the [changelog](/docs/changelog).
+
+## Style
+
+- Write in plain British English, in the second person ("you") where it helps.
+- Explain _why_ as well as _what_. The reasoning matters as much as the rule.
+- Keep pages focused. If a page covers two topics, split it.
+- Link to other handbook pages rather than repeating them.
+- More guidance will be added in [Documentation standards](/docs/documentation/standards).

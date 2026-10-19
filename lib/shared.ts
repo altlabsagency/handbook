@@ -1,14 +1,15 @@
 import { createGetUrl } from 'fumadocs-core/source';
 
-export const appName = 'My App';
+export const appName = 'AltLabs Engineering Handbook';
+export const appDescription = 'The decisions, standards, tools and practices behind our work.';
+export const siteUrl = 'https://handbook.alt-labs.agency';
 export const docsRoute = '/docs';
 export const docsImageRoute = '/og/docs';
 export const docsContentRoute = '/llms.mdx/docs';
 
-// fill this with your actual GitHub info, for example:
 export const gitConfig = {
-  user: 'fuma-nama',
-  repo: 'fumadocs',
+  user: 'altlabsagency',
+  repo: 'handbook',
   branch: 'main',
 };
 
