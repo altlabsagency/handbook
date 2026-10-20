@@ -3,7 +3,7 @@ import { createGetUrl } from 'fumadocs-core/source';
 export const appName = 'AltLabs Engineering Handbook';
 export const appDescription = 'The decisions, standards, tools and practices behind our work.';
 export const siteUrl = 'https://handbook.alt-labs.agency';
-export const docsRoute = '/docs';
+export const docsRoute = '/';
 export const docsImageRoute = '/og/docs';
 export const docsContentRoute = '/llms.mdx/docs';
 

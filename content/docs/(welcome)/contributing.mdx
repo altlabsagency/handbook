@@ -24,7 +24,7 @@ npm install
 npm run dev
 ```
 
-Then open [http://localhost:3000/docs](http://localhost:3000/docs). Pages reload as you edit.
+Then open [http://localhost:3000](http://localhost:3000). Pages reload as you edit.
 
 ### Where things live
 
@@ -32,7 +32,7 @@ Then open [http://localhost:3000/docs](http://localhost:3000/docs). Pages reload
 | -------------------------- | --------------------------------------- |
 | Pages                      | `content/docs/<section>/<page>.mdx`     |
 | Page order and section names | `meta.json` in each section folder    |
-| Home section (about, this page, changelog) | `content/docs/(home)/`  |
+| Welcome pages              | `content/docs/(welcome)/`               |
 
 ### Adding a page
 
@@ -61,7 +61,7 @@ Pages are [MDX](https://mdxjs.com), so as well as Markdown you can use these com
 <Callout type="warn" title="Heads up">Something to be careful of.</Callout>
 
 <Cards>
-  <Card title="Pull requests" href="/docs/development-workflow/pull-requests">
+  <Card title="Pull requests" href="/development-workflow/pull-requests">
     How we open and describe pull requests.
   </Card>
 </Cards>
@@ -74,7 +74,7 @@ Callout types are `info`, `warn`, `error`, `success` and `idea`. See the [Fumado
 1. Before pushing, run `npm run build` to check the site still builds.
 2. Open a pull request against `main`. An automated check builds the site, so broken pages are caught before merge.
 3. Once it's approved and merged, the site redeploys automatically within a few minutes.
-4. For anything beyond a small fix, add a line to the [changelog](/docs/changelog).
+4. For anything beyond a small fix, add a line to the [changelog](/changelog).
 
 ## Style
 
@@ -82,4 +82,4 @@ Callout types are `info`, `warn`, `error`, `success` and `idea`. See the [Fumado
 - Explain _why_ as well as _what_. The reasoning matters as much as the rule.
 - Keep pages focused. If a page covers two topics, split it.
 - Link to other handbook pages rather than repeating them.
-- More guidance will be added in [Documentation standards](/docs/documentation/standards).
+- More guidance will be added in [Documentation standards](/documentation/standards).

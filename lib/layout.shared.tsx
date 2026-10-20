@@ -5,7 +5,7 @@ function Logo() {
   return (
     <>
       <img
-        src="/brand/altlabs-logo-indigo.png"
+        src="/brand/altlabs-logo-black.png"
         alt="AltLabs"
         width={138}
         height={30}

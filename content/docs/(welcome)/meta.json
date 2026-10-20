@@ -1,7 +1,8 @@
 {
-  "title": "Home",
+  "title": "Welcome",
   "icon": "House",
   "defaultOpen": true,
+  "pagesIndex": "welcome",
   "pages": [
     "about",
     "contributing",
