@@ -6,7 +6,7 @@ The decisions, standards, tools and practices behind our work.
 
 ## Contributing
 
-Anyone at AltLabs can propose a change. Read [How to contribute](content/docs/(home)/contributing.mdx) for the full guide. In short:
+Anyone at AltLabs can propose a change. Read [How to contribute](content/docs/contributing.mdx) for the full guide. In short:
 
 - **Small fixes:** open the page on GitHub (**Open → Open in GitHub** at the top of any page) and edit it there.
 - **Bigger changes:** run the site locally, then open a pull request against `main`.
@@ -35,7 +35,7 @@ The site uses [Fumadocs](https://fumadocs.dev) on Next.js, exported as a fully s
 | -------------------------- | -------------------------------------------------------------- |
 | `content/docs/`            | All handbook pages (MDX), with `meta.json` for sidebar order   |
 | `app/(home)/page.tsx`      | Landing page                                                   |
-| `app/docs/`                | Docs layout and page template                                  |
+| `app/(docs)/`              | Docs layout and page template                                  |
 | `app/global.css`           | Brand theme (colours and fonts)                                |
 | `lib/shared.ts`            | Site name, domain and GitHub repo settings                     |
 | `lib/layout.shared.tsx`    | Navigation (logo and links)                                    |

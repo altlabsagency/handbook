@@ -3,7 +3,7 @@ import type { Folder } from 'fumadocs-core/page-tree';
 import { SearchButton } from '@/components/search-button';
 import { cn } from '@/lib/cn';
 import { source } from '@/lib/source';
-import { docsRoute, gitConfig } from '@/lib/shared';
+import { gitConfig } from '@/lib/shared';
 
 const button = {
   primary:
@@ -19,7 +19,7 @@ function getSections() {
     .getPageTree()
     .children.filter(
       (node): node is Folder =>
-        node.type === 'folder' && node.index !== undefined && node.index.url.replace(/\/$/, '') !== docsRoute,
+        node.type === 'folder' && node.index !== undefined && node.index.url !== '/welcome',
     )
     .map((folder) => ({
       folder,
@@ -41,7 +41,7 @@ export default function HomePage() {
             at <span className="text-fd-primary">AltLabs</span>.
           </h1>
           <div className="flex w-fit flex-row flex-wrap items-center justify-center gap-4">
-            <Link href="/docs" className={cn(button.primary, 'max-sm:text-sm')}>
+            <Link href="/welcome" className={cn(button.primary, 'max-sm:text-sm')}>
               Start reading
             </Link>
             <SearchButton className={cn(button.secondary, 'max-sm:text-sm')} />
@@ -88,7 +88,7 @@ export default function HomePage() {
             change. It only stays useful if the people who rely on it keep it accurate.
           </p>
           <div className="mt-auto flex flex-row flex-wrap gap-3">
-            <Link href="/docs/contributing" className={button.primary}>
+            <Link href="/contributing" className={button.primary}>
               How to contribute
             </Link>
             <a
@@ -106,10 +106,10 @@ export default function HomePage() {
           <h2 className="mb-6 text-xl font-medium tracking-tight lg:text-2xl">New here?</h2>
           <p className="mb-6">Start with why the handbook exists and how to use it, then see what's changed recently.</p>
           <div className="mt-auto flex flex-row flex-wrap gap-3">
-            <Link href="/docs/about" className={button.primary}>
+            <Link href="/about" className={button.primary}>
               About
             </Link>
-            <Link href="/docs/changelog" className={button.secondary}>
+            <Link href="/changelog" className={button.secondary}>
               Changelog
             </Link>
           </div>

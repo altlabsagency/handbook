@@ -6,8 +6,8 @@ export default function Layout({ children }: LayoutProps<'/'>) {
     <HomeLayout
       {...baseOptions()}
       links={[
-        { text: 'Handbook', url: '/docs' },
-        { text: 'Changelog', url: '/docs/changelog' },
+        { text: 'Handbook', url: '/welcome' },
+        { text: 'Changelog', url: '/changelog' },
       ]}
     >
       {children}
